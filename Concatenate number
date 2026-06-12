@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        String num = sc.nextLine();
+        boolean isConcatenated = false;
+        if (num.length() % 2 == 0) {
+            int mid = num.length() / 2;
+            String first = num.substring(0, mid);
+            String second = num.substring(mid);
+            if (first.equals(second)) {
+                isConcatenated = true;
+            }
+        }
+        if (isConcatenated) {
+            System.out.println("Concatenated Number");
+        } else {
+            System.out.println("Not a Concatenated Number");
+        }
+    }
+}
