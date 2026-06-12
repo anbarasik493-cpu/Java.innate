@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter rows: ");
+        int r = sc.nextInt();
+        System.out.print("Enter columns: ");
+        int c = sc.nextInt();
+        int[][] arr = new int[r][c];
+        System.out.println("Enter matrix elements:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        for (int i = 0; i < r; i++) {
+            int rowSum = 0;
+            for (int j = 0; j < c; j++) {
+                rowSum += arr[i][j];
+            }
+            System.out.println("Row " + (i + 1) + " Sum = " + rowSum);
+        }
+        for (int j = 0; j < c; j++) {
+            int colSum = 0;
+            for (int i = 0; i < r; i++) {
+                colSum += arr[i][j];
+            }
+            System.out.println("Column " + (j + 1) + " Sum = " + colSum);
+        }
+
+        sc.close();
+    }
+}
