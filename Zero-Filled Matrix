@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] matrix = new int[3][3]; // all elements are 0 by default
+        System.out.println("Enter 5 numbers:");
+        for (int k = 0; k < 5; k++) {
+            int value = sc.nextInt();
+
+            int row = k / 3;
+            int col = k % 3;
+
+            matrix[row][col] = value;
+        }
+        System.out.println("3x3 Matrix:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
